@@ -1,0 +1,47 @@
+.paper{
+    display: flex;
+    flex-direction: row;
+
+
+
+    @media (max-width:768px){
+        flex-direction: column;
+    }
+}
+
+.sem{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+
+
+    button{
+        // margin: 2rem;
+        // margin: 2px;
+        padding: 8px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 3px;
+        cursor: pointer;
+        height: 2.5rem;
+        outline: none;
+        // background-color: burlywood;
+        // border: 1px solid blue;
+        border: none;
+
+    }
+    button:focus{
+        border-right: 3px solid blue;
+    }
+
+    @media (max-width:768px){
+        flex-direction: row;
+        margin-left: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+.subjects{
+    @media (max-width:768px){
+        margin-left: 2rem;
+    }
+}

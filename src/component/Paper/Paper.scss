@@ -1,0 +1,157 @@
+$color: #0ea1ff;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover{
+        width: 100%;
+        height: 20rem;
+        // background: linear-gradient(-45deg,#1A1110,#195dba,#21605D,#425068,#3E619B,#17181C,#339476,#1A2421,#343434);
+        background:  linear-gradient(-45deg, rgb(64, 93, 230), rgb(88, 81, 219), rgb(131, 58, 180), 
+        rgb(193, 53, 132), rgb(225, 48, 108), rgb(253, 29, 29), rgb(245, 96, 64), rgb(247, 119, 55),
+         rgb(252, 175, 69), rgb(255, 205, 75), rgb(197, 255, 56), rgb(81, 255, 0));
+        animation: gradiantcolors 6s ease-in-out infinite alternate;
+        background-size: 200% 200%;
+        color: white;
+
+        h1{
+            font-size: 3rem;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+
+}
+// data-gradient="{"angle":-45,"colors":[{"premium_gradient_colors":"#405DE6","_id":"2ac60d9"},{"premium_gradient_colors":"#5851DB","_id":"3347b0e"},{"premium_gradient_colors":"#833AB4","_id":"196f760"},{"premium_gradient_colors":"#C13584","_id":"f472adb"},{"premium_gradient_colors":"#E1306C","_id":"9f97c2e"},{"premium_gradient_colors":"#FD1D1D","_id":"4c5a904"},{"premium_gradient_colors":"#F56040","_id":"10d29b8"},{"premium_gradient_colors":"#F77737","_id":"01aa7eb"},{"premium_gradient_colors":"#FCAF45","_id":"c364f9a"},{"premium_gradient_colors":"#FFCD4B","_id":"cd08641"},{"premium_gradient_colors":"#C5FF38","_id":"fe862fe"},{"premium_gradient_colors":"#51FF00","_id":"907de14"}]}"
+@keyframes gradiantcolors{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+iframe{
+    height: 50rem;
+    width:55rem;
+
+    @media (max-width:768px){
+        height: 30rem;
+        width:20rem;
+        
+    }
+}
+
+.frame{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    border: 3rem solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // overflow: hidden;
+
+    h4{
+        display: flex;
+        flex-direction: start;
+        color:   #54626F;
+    }
+    div{
+        button{
+            margin: 2rem;
+            cursor: pointer;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 3px;
+            // width: 6rem;
+            height: 2.5rem;
+            background-color: white;
+            outline: none;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 6px;
+           position: relative; 
+           overflow: hidden;
+           transition: all 0.4s ease-in-out;
+           z-index: 1;  
+      }
+  
+      button:hover{
+          color: white;
+      }
+         button::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width:100%;
+              height: 100%;
+              background-color: darken($color, 15%);
+              transition: all .3s;
+              transform: translateX(100%);
+               transition: all 0.4s ease;
+            }
+            button:hover:before {
+                transform: translateX(0);
+                z-index: -1;
+            }
+    }
+    @media (max-width:768px){
+       left: 1rem;
+       border: 2rem solid white;
+    }
+}
+
+
+.download{
+   
+     position: absolute;
+     top: 37%;
+    // bottom: 0;
+     right: 5%;
+     height: 1.5rem;
+     padding: 13px;
+     text-align: center;
+     cursor: pointer;
+     border-radius: 1rem;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 1px 5px -3px;
+     background-color: white;
+     border: 1px solid gray;
+
+
+    button{
+        border: none;
+        background-color: white;
+
+        a{ 
+            text-decoration: none;
+            border: none;
+            color: black ;
+            font-weight: bold;
+            font-size: larger;
+            letter-spacing: 1.2px;
+            // margin: 1rem;
+
+            svg{
+                margin-right: 5px;
+            }
+          
+        }
+        
+    }
+
+    @media (max-width: 768px){
+      
+        top: 110%;
+        left: 10%;
+        // margin-top: 100rem;
+    }
+   
+}
